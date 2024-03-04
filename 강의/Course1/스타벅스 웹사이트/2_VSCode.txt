@@ -1,0 +1,50 @@
+> VSCode
+
+Ctrl + Shift + P : 단축키 검색
+Ctrl + O : 파일 열기
+
+폴더나 디렉토리가 프로젝트 단위
+
+! > Enter나 Tab : HTML의 기본 구조 자동완성
+
+왼쪽의 사이드 바
+액티비티 바
+하단의 상태바
+화면 중앙의 패널
+
+Extensions
+VSCode에 설치할 수 있는 확장 기능, 플러그인
+
+Emmet Abbreviation
+
+Alt + Shift + F : 전체 파일의 코드 정리
+
+.vscode 디렉토리
+현재 프로젝트의 VSCode 설정 정보가 들어있는 폴더
+
+auto rename tag 확장
+자동으로 HTML 태그 쌍의 이름 바꿔주는 확장
+
+live server 확장
+설치 후 우클릭 > Open with live server
+엣지로 열리는게 불편해서 설정에서 기본 브라우저를 크롬으로 변경함
+
+Ctrl + S : 단일 파일 저장
+Ctrl + K S : 프로젝트 내 모든 변화 저장
+
+Ctrl + B : 왼쪽에 있는 사이드바 열고 닫음
+Ctrl + P : 이름으로 파일 검색
+Ctrl + F : 파일 내 부분 찾기
+Ctrl + H : 찾은 부분 바꾸기 및 모두 바꾸기
+
+Alt + Up : 커서가 위치해 있는 줄을 윗줄로 이동
+Alt + Down : 다음줄로 이동
+Alt + Shift + Up : 윗줄에 복붙
+Alt + Shift + Down : 아랫줄에 복붙
+
+Tab : 들여쓰기, 인덴트
+Shift + Tab : 당겨쓰기, 아웃덴트
+공백 기본 설정은 4나 2 권장
+
+Ctrl + Tab : 탭 이동
+Ctrl + \ : 창 분할
