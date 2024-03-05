@@ -28,3 +28,34 @@
 
 </html>
 - 종료태그
+
+
+> 개발자 도구
+
+브라우저 화면에서 F12키 누르면 열림
+Console 탭보면 main.js가 잘 연결되어있음을 알 수 있다
+
+
+> HTML 태그 역할 살펴보기
+
+<title></title> : HTML 문서의 제목, 다른 페이지와 구분할 수 있게 브라우저 탭에 표시됨
+
+<link rel="" href="" /> : 외부 문서(CSS 파일, 로고 등의 이미지 파일)를 가져와 연결할 때 사용
+rel(relationship)은 가져올 문서와의 관계, href(hyper reference)는 가져올 문서의 경로
+
+cf) 페이지에 대표로 사용되는 아이콘은 favorite icon을 줄인 favicon(파비콘)으로 부름
+
+<style></style> : 스타일(CSS)를 HTML 문서 안에서 작성하는 경우에 사용
+태그 내부에 CSS 문법을 작성하여 적용될 수 있게 함
+
+note) 스타일의 선언 방식은 다양함
+
+<script src=""></script> : src라는 HTML 속성을 사용하여 외부의 자바스크립트 파일을 가져오는 경우
+<script></script> : 자바스크립트를 HTML 문서 안에서 작성하는 경우 태그 내부에 자바스크립트 코드 작성
+
+<meta /> : 위의 태그로 나타낼 수 없는 나머지 모든 정보(제작자, viewport 등)들을 표시하여 브라우저와 검색엔진에게 알려줌
+<meta name="" content="" />
+<meta charset="" />
+name은 정보의 종류, content는 정보의 값
+charset(Character Set)는 문자 처리 방식(문자인코딩)을 명시하며 UTF-8 주로 사용
+
