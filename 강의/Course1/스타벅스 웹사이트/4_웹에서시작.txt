@@ -1,0 +1,28 @@
+> https://codepen.io/
+
+HTML, CSS 코드 입력 후 결과를 바로 확인 가능
+JS 코드도 개발자 도구를 통해 확인 가능
+
+전처리도구(Preprocessor)
+
+
+> 브라우저 기본 스타일 초기화
+
+구글의 크롬 브라우저에서는 기본적으로 HTML 요소들에 CSS 스타일 제공
+body의 margin(외부여백) 값은 8px
+
+크로스 브라우징을 위해 브라우저에서 기본적으로 제공하는 CSS 스타일을 초기화하는 것이 좋음
+how?
+reset css cdn 검색
+https://www.jsdelivr.com/package/npm/reset-css
+압축된 버전인 reset.min.css 사용 권장
+copy HTML 선택 후 index.html head 부분 CSS 목록 중 가장 위에 붙여넣기
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css">
+
+코드펜에서 CSS 설정 중 CSS Base를 Reset으로 선택하면 위와 동일하게 브라우저 기본 스타일 초기화 가능
+
+
+> Emmet 기능
+
+간단하게 태그 이름만 명시하고 탭 키를 눌러서 요소를 자동으로 완성할 수 있게 해줌
+VSCode에서도, codepen에서도 HTML, CSS 코드에 emmet 문법 제공
