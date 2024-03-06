@@ -11,20 +11,55 @@
     <!-- 브라우저 기본 스타일 초기화
     사이트가 크롬, 사파리 등 다양한 브라우저에서 동일하게 출력되기를 원한다면
     브라우저의 스타일을 초기화하고 새롭게 만들어야 한다는 점 기억 -->
+
+
+    <!-- <script src="test.js"></script> -->
+
+
+    <style>
+      span {
+        color: white;
+        background-color: black;
+      }
+
+      td {
+        border: 1px solid blue;
+        padding: 10px;
+      }
+      .red {
+        color: orangered;
+      }
+      /* 앞에 .을 붙여주면 class 선택자 */
+      .green {
+        color: greenyellow;
+      }
+      .purple {
+        color: plum;
+      }
+      .yellow {
+        color: yellow;
+      }
+      /* 앞에 #을 붙여주면 id 선택자 */
+      #abc {
+        color: palevioletred;
+        font-size: 25px;
+        background-color: white;
+      }
+    </style>
   </head>
   <body>
-    <div>
+    <!-- <div data-fruit-name="not a fruit">
       <h1>오늘의 날씨</h1>
       <h2>오늘의 날씨</h2>
       <h3>오늘의 날씨</h3>
-      <!-- 중요도가 낮아지면서 글자의 크기가 점점 작아짐 (브라우저 기본 스타일 초기화안했을 시)
+      중요도가 낮아지면서 글자의 크기가 점점 작아짐 (브라우저 기본 스타일 초기화안했을 시)
       BUT 페이지의 구조를 나타내기 위해 HTML을 쓰는 것이므로 글자의 크기는 중요한 포인트가 아님
-      꾸미는건 CSS로, HTML은 그 역할과 의미에 주목할 것 -->
+      꾸미는건 CSS로, HTML은 그 역할과 의미에 주목할 것
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Nabi_2005-09-02_0400Z.jpg/220px-Nabi_2005-09-02_0400Z.jpg"
         alt="태풍"
       />
-    </div>
+    </div> -->
     <br />
     <ul>
       <li>사과</li>
@@ -40,7 +75,65 @@
       <li>오렌지</li>
     </ol>
     <br />
-    <a href="https://naver.com">NAVER</a>
+    <a href="https://naver.com" target="_blank" title="네이버로 이동">NAVER</a>
+    <!-- 새로운 탭에 네이버 페이지 열리게 됨 -->
     <a href="https://google.com">GOOGLE</a>
+    <!-- 현재 탭에서 페이지가 열림, 사용자가 Ctrl키를 누르고 링크를 열면 새 탭에서 링크 열림 -->
+    <br />
+    <p>
+      동해물과 백두산이 마르고 닳도록<br />하느님이 보우하사
+      <span>우리나라</span> 만세
+    </p>
+    <!-- 요소의 콘텐츠 부분에 키보드로 엔터키를 넣어서 줄바꿈을 해도 화면에는 반영 X 
+    br 태그 사용해주기 -->
+    <br />
+    <!-- <input
+      type="text"
+      value="Input here. Actually, you can't"
+      placeholder="이름을 입력하세요!"
+      disabled
+    />
+    <label> <input type="checkbox" checked /> Apple</label>
+    <label> <input type="checkbox" checked /> Banana</label> -->
+    <!-- label 요소로 묶어주었기 때문에 화면 상의 글자를 눌러도 체크/해제 가능 -->
+    <br />
+    <!-- <br />
+    <label> <input type="radio" name="fruits" /> Apple</label>
+    <label> <input type="radio" name="fruits" /> Banana</label>
+    <br /> -->
+    <br />
+    <table>
+      <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>b</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td colspan="2">D</td>
+      </tr>
+    </table>
+    <br />
+    <!-- this is comment -->
+    <p>
+      무궁화 삼천리
+      <span class="red">화</span>
+      <span class="purple">려</span>
+      <span class="green">강</span>
+      <span class="yellow">산</span>
+      <br />대한 사람 대한으로 길이 보전하세
+    </p>
+    <br />
+    <p>클래스 태그와 <span id="abc">아이디</span> 태그 연습 공간</p>
+    <br />
+
+
+    
+
+    <div data-fruit-name="apple" >사과</div>
+    <div data-fruit-name="banana" >바나나</div>
+
+    <script src="test.js"></script>
   </body>
 </html>
+
