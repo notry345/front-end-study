@@ -1,0 +1,74 @@
+> HTML의 핵심 요소 정리
+
+HTML 요소는 기본적으로 의미를 갖고 있다
+
+<div></div> : 블록 요소 (division)
+특별한 의미가 없이 레이아웃 작업 시 영역 구분을 위해 사용
+
+<h1></h1> : 제목을 의미하는 블록 요소 (heading)
+1~6번까지 있으며 숫자가 작을수록 더 중요한 제목을 정의함
+h1은 대주제, h2는 중간주제, h3은 소주제, ...
+작성시 중요도를 잘 정리하여 h2~h4 안에서 주로 사용
+
+<p></p> : 문장을 의미하는 블록 요소 (paragraph)
+문장을 구분하는 용도로 사용
+
+<img src="" alt="" /> : 이미지를 삽입하는 인라인 요소 (image)
+필수 속성인 src(source)에는 삽입할 이미지의 경로를, alt(alternate)에는 삽입할 이미지의 이름(대체 텍스트) 명시
+
+<ul> : 순서가 필요없는 목록의 집합을 의미하는 블록요소 (unordered list)
+  <li></li> : 목록 내 각 항목을 의미하는 블록 요소 (list item)
+</ul>
+- ul 태그의 자식으로는 무조건 한 개 이상의 li 태그가 들어있어야 함
+- li 태그 또한 그것의 집합인 ul 태그로 무조건 감싸져 있어야 함
+
+<ol></ol> : 순서가 필요한 목록 (ordered list)
+
+<a href=""></a> : 다른 페이지로 이동하는 하이퍼링크를 지정하는 인라인 요소 (anchor)
+href(hypertext reference)속성에 링크 URL(Uniform Resource Locator)을, target 속성에 링크 URL의 표시 위치(브라우저 탭)를 명시
+target="_blank"인 경우 새 탭에 페이지가 열리게 됨
+
+<span></span> : 특별한 의미가 없는, 구분을 위한 인라인 요소
+
+<br /> : 줄바꿈 인라인 요소 (break)
+
+<input type="" /> : 사용자에게 데이터를 입력받는 인라인-블록 요소
+type 속성에는 text 등 입력받을 데이터의 타입을 명시
+value 속성에는 미리 입력되어져 있을 데이터를 명시
+placeholder 속성에는 사용자가 입력할 데이터에 대한 힌트 명시, 이는 사용자가 커서를 올려놓으면 사라짐
+<input type="text" placeholder="이름을 입력하세요!" />
+disabled 속성은 입력 요소를 비활성화하여 입력할 수 없는 상태로 만듬, 속성의 값 명시 X
+<input type="text" disabled />
+
+인라인-블록(inline-block) 요소란?
+글자 요소처럼 수평으로 쌓이지만
+상자 요소처럼 가로 세로 값을 지정할 수 있고,
+margin과 padding과 같은 여백의 상하좌우 값을 지정할 수 있음
+
+<label> : 라벨링이 가능 요소(input 요소 등)의 제목을 의미하는 인라인 요소
+  <input type="checkbox" /> Apple
+</label>
+<label>
+  <input type="checkbox" checked /> Banana
+</label>
+- checkbox는 사용자에게 체크 여부를 입력 받음
+- checked 속성은 체크박스 입력 요소가 미리 체크되어 있게 만들어줌, 속성의 값 명시 X
+
+<label>
+  <input type="radio" name="fruits" /> Apple
+</label>
+<label>
+  <input type="radio" name="fruits" /> Banana
+</label>
+- radio(radio button) : 사용자에게 체크 여부를 그룹에서 1개만 입력 받음 (택1)
+- name 속성에 그룹의 이름 입력
+
+<table> : 표를 만들 때 사용하는 테이블 요소(블록 요소 중 하나), 행(row)과 열(column)의 집합
+  <tr> : 행을 지정하는 table-row 요소 (table row)
+    <td>A</td><td>B</td> : 열을 지정하는 table-cell요소 (table data)
+  </tr>
+  <tr>
+    <td>C</td><td>D</td>
+  </tr>
+</table>
+
