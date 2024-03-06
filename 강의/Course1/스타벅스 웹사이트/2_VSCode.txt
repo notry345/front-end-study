@@ -30,6 +30,7 @@ live server 확장
 엣지로 열리는게 불편해서 설정에서 기본 브라우저를 크롬으로 변경함
 
 Ctrl + S : 단일 파일 저장
+!!!
 Ctrl + K S : 프로젝트 내 모든 변화 저장
 
 Ctrl + B : 왼쪽에 있는 사이드바 열고 닫음
@@ -40,7 +41,8 @@ Ctrl + H : 찾은 부분 바꾸기 및 모두 바꾸기
 Alt + Up : 커서가 위치해 있는 줄을 윗줄로 이동
 Alt + Down : 다음줄로 이동
 Alt + Shift + Up : 윗줄에 복붙
-Alt + Shift + Down : 아랫줄에 복붙
+!!!
+Alt + Shift + Down : 아랫줄에 복붙 <- 겁나 유용
 
 Tab : 들여쓰기, 인덴트
 Shift + Tab : 당겨쓰기, 아웃덴트
