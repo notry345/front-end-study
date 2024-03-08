@@ -100,6 +100,7 @@ div {
 1.1) * : 전체 선택자 (universal selector)
 모든 요소를 선택함
 특정 범위 안에 있는 모든 요소를 선택하는 개념으로 간혹 씀
+단독으로는 거의 안쓰이고 복합 선택자를 통해서 다른 선택자와 혼합하여 씀
 
 * {
   color: red;
@@ -264,6 +265,35 @@ input:focus {
 }
 
 마찬가지로 뒤에서부터 읽어나가면 편함
+
+3.5) ABC:last-child
+선택자 ABC가 형제 요소 중 막내라면 선택
+
+.fruits h3:last-child {
+  color-red;
+}
+
+3.6) ABC:nth-child(n)
+선택자 ABC가 형제 요소 중 (n)째라면 선택
+괄호 안에 숫자뿐만이 아니라 숫자와 함께 n이라는 키워드도 사용 가능
+- 이 n이라는 키워드는 숫자를 0부터 세기 시작 (zero-based numbering)
+
+/* fruits라는 클래스를 가진 요소의 하위 요소들을 모두 선택하되
+    두번째 형제 요소를 선택 */
+.fruits *:nth-child(2) {
+  color: green;
+}
+
+.fruits *:nth-child(n+1) {
+  font-weight: 700;
+}
+
+3.7) ABC:not(XYZ) : 부정 선택자(negation)
+선택자 XYZ가 아닌 ABC 요소 선택
+
+.fruits *:not(span) {
+  background-color: yellow;
+}
 
 4. 가상 요소 선택자
 

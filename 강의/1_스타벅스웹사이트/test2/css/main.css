@@ -32,3 +32,12 @@ input:focus {
 .fruits div:first-child {
   color: red;
 }
+.fruits h3:last-child {
+  color: orange;
+}
+.fruits *:nth-child(2n) {
+  font-weight: 700;
+}
+.fruits *:not(span) {
+  background-color: rgb(192, 255, 99);
+}
