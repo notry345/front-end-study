@@ -1,6 +1,27 @@
 /* @import url("./box.css"); */
 
-div {
-  font-size: 50px;
-  text-decoration: underline;
+/* 클래스 선택자 */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  transition: 1s; /* 이거 개쩐다 */
+}
+/* :hover라는 가상 클래스 선택자를 */
+.box:hover {
+  background-color: royalblue;
+  width: 300px;
+}
+.box:active {
+  background-color: red;
+}
+.box:focus {
+  height: 150px;
+  transition: 1s;
+}
+a:hover {
+  color: green;
+}
+input:focus {
+  background-color: rgb(226, 255, 224);
 }
