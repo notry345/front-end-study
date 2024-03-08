@@ -212,8 +212,9 @@ div .orange {
   color: red;
 }
 
-3. 가상 클래스 (pswudo-classes)
+3. 가상 클래스 (pseudo-classes)
 사용자가 어떠한 행동을 했을 때 동작하는 개념
+일반적으로 동작은 자바스크립트에서 다루지만..
 
 3.1) ABC:hover
 선택자 ABC 요소에 마우스 커서가 올라가 있는 동안 선택
@@ -241,6 +242,28 @@ a:active {
 input:focus {
   background-color: orange;
 }
+
+3.4) ABC:first-child
+선택자 ABC가 형제 요소 중 첫째라면 선택
+형제 요소들 중 ABC가 첫 번째인 경우에만 선택
+
+- HTML 파일
+<div class="fruits">
+  <span>berry</span>
+  <span>watermelon</span>
+  <div>orange</div>
+  <p>orange</p>
+  <h3>orange</h3>
+</div>
+
+- CSS 파일
+/* fruits라는 클래스를 갖고 있는 요소의 하위 요소 중 span 태그를 갖은 요소들을 찾고
+    그 형제 요소들 중 첫째인지 확인하는 선택자임 */
+.fruits span:first-child {
+  color: red;
+}
+
+마찬가지로 뒤에서부터 읽어나가면 편함
 
 4. 가상 요소 선택자
 
