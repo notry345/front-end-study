@@ -8,7 +8,7 @@
   </head>
   <body>
     <a href="http://www.naver.com">TO NAVER</a>
-    <div class="box" tabindex="-1"></div>
+    <div class="box" tabindex="-1">NOTRY!</div>
     <input type="text" />
     <br />
     <div class="fruits">
@@ -18,5 +18,51 @@
       <p>orange</p>
       <h3>orange</h3>
     </div>
+    <div class="fox">기존 내용입니다</div>
+    <input type="tt" value="NOTRY" />
+    <input type="number" value="1234" />
+    <input type="tt" value="!@#$" disabled />
+    <span><br /><br /><br /></span>
+
+    <!-- 실습해보다가 크롬 경고창... 음 안뜨네 이제 ㅠ -->
+
+    <input type="text" /><br />
+    <input type="password" /><br />
+    <!-- data라는 전역 속성을 통하여 원하는 이름을 명시,
+      그 안에 어떠한 데이터를 담아서 자바스크립트에서 사용할 수 있음 -->
+    <span data-fruit-name="apple">사과</span>
+    <br /><br /><br />
+
+    <!-- 스타일 상속 개념 연습 -->
+    <div class="eco">
+      ECOSYSTEM<br />
+      <div class="animal">
+        Animal
+        <div class="tiger">- tiger</div>
+        <div class="lion">- lion</div>
+        <div class="elephant">- elephant</div>
+      </div>
+      <div class="plants">
+        Plant
+        <div>- flower</div>
+        <div>- grass</div>
+      </div>
+    </div>
+    <!-- CSS 강제 상속 연습 -->
+    <span><br /></span>
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+    <span><br /><br /></span>
+    <!-- 선택자 우선순위 개념의 이해 -->
+    <div
+      id="color_yellow"
+      class="color_green"
+      style="color: orange; font-size: 40px; font-weight: bolder"
+    >
+      HELLO WORLD!!!
+    </div>
+    <span><br><br></span>
+    <div id="hello" class="hello" style="font-size:50px; font-weight: bolder;">Last Example~</div>
   </body>
 </html>

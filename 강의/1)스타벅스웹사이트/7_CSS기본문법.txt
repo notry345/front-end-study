@@ -295,10 +295,136 @@ input:focus {
   background-color: yellow;
 }
 
-4. 가상 요소 선택자
+4. 가상 요소 (pseudo-elements)
+가상의 요소를 사용하여 CSS에서 제어를 하면
+HTML의 구조를 조금 더 단순화할 수 있어서 유용함
+
+4.1) ABC::before
+선택자 ABC 요소의 내부 앞에 내용(content)을 삽입
+삽입된 위치에 해당하는 가상 요소는 인라인 요소임
+before와 after는 실제로 요소를 삽입해야 하는 선택자이기 때문에
+CSS 속성 중 content라는 속성을 이용하여
+삽입할 요소의 내용이 무엇인지 무조건 명시를 해줘야함 (""를 비워두는 한이 있더라도)
+
+- HTML
+<div class="box">여기에콘텐츠</div>
+
+- CSS
+.box::before {
+  content: "추가요~";
+}
+
+4.2) ABC::after
+선택자 ABC 요소의 내부 뒤에 내용(content)을 삽입
+
+.box::after {
+  content: "뒤!";
+}
+
+RV) 인라인 요소는 가로 세로 값을 지정해도 실제로 적용이 안되는 특성을 갖고 있다
+특정한 인라인 요소에 가로 세로 값을 부여해 주고 싶으면 블록 요소로 전환해 주어야 함
+display라는 CSS 속성을 통해 바꿀 수 있다
+display: block;
+
+5. 속성 (attribute)
+
+5.1) [ABC]
+속성 ABC를 포함한 요소 선택
+특이한 속성을 갖고 있는 요소를 찾기에 적합
+값이 아니라 속성의 이름만 명시하기 때문에 많은 요소가 갖고 있는 속성을 기준으로 어떤 요소를 특정에서 찾기에는 적합 X
+
+- HTML
+<input type="text" value="NOTRY">
+<input type="password" value="1234">
+<input type="text" value="!@#$" disabled>
+cf) input의 type 속성을 password로 설정해주면 화면에 보이는 내용만 점으로 대체해줌
+
+- CSS
+[disabled] {
+  color: red;
+}
+[type] {
+  color: blueviolet;
+}
+
+5.2) [ABC="XYZ"]
+속성 ABC를 포함하고 그 값이 XYZ인 요소 선택
+따옴표 생략 가능하지만 붙이는 거 권장
+
+[type="number"] {
+  color: blue;
+}
 
 
+> CSS의 스타일 상속
 
-5. 속성
+적용된 CSS 내용이 해당 요소의 자식 요소는 물론, 하위 요소들에게까지 영향을 미치는 것
+상속되는 CSS 속성들은 정해져 있음 (대부분의 글자,문자와 관련되어 있는 속성들)
+font-style : 글자 기울기
+font-weight : 글자 두께
+font-size : 글자 크기
+line-height : 줄 높이
+font-family : 폰트, 서체
+color : 글자 색상
+text-align : 정렬
+
+강제 상속
+
+실질적으로 상속이 되지 않는 CSS 내용도 강제적으로 상속시키는 것
+기본적으로 상속이 되지 않는 속성이지만 값을 inherit으로 지정함으로써 부모 요소로부터 강제로 상속받게 할 수 있음
 
 
+> 선택자 우선순위
+
+우선순위란?
+: 같은 요소가 여러 선언의 대상이 된 경우,
+  어떤 선언의 CSS 속성을 우선 적용할지 결정하는 방법
+1. 점수가 높은 선언이 우선시됨
+2. 점수가 같으면, 가장 마지막에 해석된 선언이 우선시됨
+
+명시도 : CSS 우선순위의 점수를 계산하는 것
+중요도 : !important가 붙는..
+선언 순서 : 코드가 해석된/해석되는 순서
+
+!important - 99999999점
+인라인 선언 - 1000점
+ID 선택자 - 100점
+Class 선택자 - 10점
+태그 선택자 - 1점
+전체 선택자 - 0점
+상속 - 점수를 별도로 계산 하지 않음
+
+div {color: red !important;}
+#color_yellow {color: yellow;}
+.color_green {color: green;}
+div {color: blue;}
+* {color: darkblue;}
+body {color: violet;}
+
+연습용 문제
+
+.list li.item {color:red;} 21점
+- 후손(클래스 일치(태그+클래스))
+.list li:hover {color:red;} 21점
+- 후손 (클래스 태그+가상클래스)
+- 가상클래스 선택자도 결국에는 클래스 선택자임
+.box::before {content:"Good"; color:red;} 21점
+- 클래스+가상요소
+- 가상요소 선택자도 태그 선택자와 같은 우선순위 가짐
+#submit span {color:red;} 101점
+- 후손(ID 태그)
+header .menu li::nth-child(2) {color:red;} 22점
+- 후손(태그 후손(클래스 태그+가상클래스))
+h1 {color:red;} 1점
+- 태그
+:not(.box) {color:red;} 10점
+- 가상클래스 선택자 중 부정 선택자(not)는 점수 계산 X
+- 부정(클래스)
+
+cf) 
+- 사실 ID는 고유해야 하기 때문에
+  화면에 특별하게 고유한 요소를 지정하지 않는 한 ID 선택자는 자주 사용 X
+- 인라인 선언 방식을 통해 작성한 CSS 스타일은 쓸데없이 높은 우선순위를 갖기 때문에
+  CSS 파일에서 수정이 불가능한 상태가 되버리기 때문에(!important 쓰는 방법은 가능) 되도록 지양
+- !important를 붙이는 방법도 최대한 지양할 것
+  한번 붙이기 시작하면 다른 방식으로 스타일을 덮어써서 수정을 할 수 없게 되기 때문

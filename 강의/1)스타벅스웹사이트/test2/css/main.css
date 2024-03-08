@@ -13,17 +13,22 @@
   width: 300px;
 }
 .box:active {
-  background-color: red;
+  background-color: rgb(80, 80, 80);
 }
 .box:focus {
   height: 150px;
-  transition: 1s;
+  /* transition: 1s; */
 }
 a:hover {
   color: green;
 }
 input:focus {
-  background-color: rgb(126, 220, 119);
+  background-color: rgb(255, 109, 150);
+  transition: 1s;
+}
+*:focus {
+  background-color: rgb(255, 109, 150);
+  transition: 1s;
 }
 
 .fruits span:first-child {
@@ -39,5 +44,80 @@ input:focus {
   font-weight: 700;
 }
 .fruits *:not(span) {
-  background-color: rgb(192, 255, 99);
+  text-decoration: underline;
+}
+.fox::before {
+  content: "가상요소 선택자로 추가된 내용입니다~/";
+}
+.fox::after {
+  content: "/뒤! 입니다~";
+}
+.box::before {
+  content: "--- "
+}
+.box::after {
+  content: "";
+  display: block; /* 인라인 요소를 블록 요소로 저장 */
+  width: 30px;
+  height: 30px;
+  background-color: royalblue;
+}
+
+/* 속성 선택자 연습해보기 */
+[type="password"] {
+  background-color: lightcoral;
+}
+[data-fruit-name] {
+  color: darkred;
+}
+
+/* CSS 상속 개념 이해하기 */ 
+.animal {
+  color: darkolivegreen;
+  font-weight: bold;
+}
+.eco {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+/* CSS 강제 상속 연습 */
+.parent {
+  width: 300px;
+  height: 100px;
+  background-color: orange;
+}
+.child {
+  width: 25px;
+  height: inherit; /* 부모 요소로부터 강제 상속 */
+  background-color: inherit;
+  position: fixed; /* 화면에 viewport를 기준으로 배치하겠다는 의미 */
+  top: 100px; /* 위에서 100px지점, 오른쪽에서 10px 지점 */
+  right: 10px;
+}
+
+/* <선택자 우선순위 개념의 이해> */
+
+/* 태그 선택자 */
+/* div {color: red !important;} */
+/* id 선택자 */
+/* #color_yellow {color: yellow;} */
+/* class 선택자 */
+/* .color_green {color: green;} */
+/* 태그 선택자 */
+/* div {color: blue;} */
+/* 전체 선택자 */
+/* * {color: darkblue;} */
+/* 태그 선택자 */
+/* body {color: violet;} */
+
+/* #hello {
+  color: blue;
+} */
+/* 사실 ID는 고유해야 하기 때문에 화면에 특별하게 고유한 요소를 지정하지 않는 한 ID 선택자는 자주 사용 X */
+div.hello {
+  color: lightgreen;
+}
+.hello {
+  color: orangered !important;
 }
