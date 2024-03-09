@@ -125,21 +125,128 @@ cf)
 - 기본적으로 브라우저는 따로 폰트의 크기가 명시되어 있지 않으면, 16px만큼의 크기를 가짐
 
 
-> 외부 여백, margin
+> 외부 여백 (margin)
 
 요소 바깥쪽에 공간을 만들어서 그 주변의 요소들을 밀어내는 개념
 
-margin : 요소의 외부 여백(공간)을 지정하는 단축 속성, 음수 사용할 수 있음!
-- 0 : 외부 여백 없음
+margin : 요소의 외부 여백(공간)을 지정하는 단축 속성, 음수 사용할 수 있음!(여백이 안쪽으로 줄어듬)
+- 0(기본값) : 외부 여백 없음
 - auto : 브라우저가 여백을 계산, 가로(세로) 너비가 있는 요소의 가운데 정렬에 주로 활용
 - 단위 : px, em, vw 등 단위로 지정
 - % : 부모 요소의 가로 너비에 대한 비율로 지정 (세로 너비 아님 주의)
 
+margin-방향 : 요소의 외부 여백을 지정하는 기타 개별 속성
 각각의 방향으로 여백을 추가할 수 있음
+margin-top
+margin-right
 margin-bottom
+margin-left
+
+margin이라는 속성에는 값을 지정할 수가 있고, 기본값은 0
+그리고 margin은 단축 속성
+margin에 각각의 방향을 한 번에 제어하는 마치 단축키와 같은 단축 속성
+
+값을 1개 작성하면
+- 값이 위, 아래, 좌, 우에 모두 지정됨
+margin: 0;
+top,right,bottom,left
+
+값을 2개 작성하면
+- 첫번째 값은 위, 아래에
+  두번째 값은 좌, 우에
+margin: 10px 20px;
+top,bottom/left,right
+
+값을 3개 작성하면
+- 첫번째 값은 위에
+  두번째 값은 좌, 우에
+  세번째 값은 아래에
+margin: 10px 20px 30px;
+top/left,right/bottom
+
+값을 4개 작성하면 위부터 시계방향으로 값 적용
+- 첫번째 값은 위
+  두번째 값은 우
+  세번째 값은 아래
+  네번째 값은 좌
+margin: 10px 20px 30px 40px;
+top/right/bottom/left
 
 브라우저 개발자도구에서 원하는 요소를 선택한 후 Computed 탭에서
 요소가 가지고 있는 기본적인 크기, 내부 여백, 테두리선, 외부 여백에 대한 내용을 확인 할 수 있음
 
-단축 속성이란?
 
+> 내부 여백 (padding)
+
+padding : 요소의 내부 여백(공간)을 지정하는 단축 속성, 요소 자체의 크기가 커짐
+- 0(기본값) : 내부 여백 없음
+- 단위 : px, em, vw 등 단위로 지정
+- % : 부모 요소의 가로 너비에 대한 비율로 지정
+
+값이 1개
+padding: 0; -> top,right,bottom,left
+
+값이 2개
+padding: 10px 20px; -> top,bottom/left,right
+
+값이 3개
+padding 10px 20px 30px; -> top/left,right/bottom
+
+값이 4개
+padding 10px 20px 30px 40px; -> top/right/bottom/left
+
+단축 속성임
+개별 속성도 있음
+padding-방향 : 요소의 내부 여백을 지정하는 기타 개별 속성들
+padding-top
+padding-right
+padding-bottom
+padding-left
+
+
+> 테두리선(border)과 색상 표현
+
+border: 선의두께(border-width) 선의종류(border-style) 선의색상(border-color);
+요소의 크기가 커짐
+선의 색상은 기본적으로 검정색
+
+각각의 기본값
+border: medium none black
+
+border-width : 요소 테두리 선의 두께
+- medium(기본값) : 중간 두께
+- thin : 얇은 두께
+- thick : 굵은 두께
+- 단위 : px, em, % 등의 단위로 지정  <- 권장
+- 단축 속성임
+  border-width: top,right,bottom,left;
+  border-width: top,bottom left,right;
+  border-width: top left,right bottom;
+  border-width: top right bottom left;
+- 당연하게도 개별 속성 또한 있음
+
+border-style : 요소 테두리 선의 종류
+- none(기본값) : 선없음
+- solid : 실선
+- dashed : 파선
+- dotted : 점선
+- double : 두 줄 선
+- groove : 홈이 파여있는 모양
+- ridge : 솟은 모양 (groove의 반대)
+- inset : 요소 전체가 들어간 모양
+- outset : 요소 전체가 나간 모양
+- 각각의 방향을 개별적으로 통제 가능
+  border-style: top,right,bottom,left;
+  border-style: top,bottom left,right;
+  border-style: top left,right bottom;
+  border-style: top right bottom left;
+
+border-color : 요소 테두리 선의 색상을 지정하는 단축 속성
+- black(기본값)
+- 색상 : 선의 색상
+- transparent : 투명
+- 각각의 방향을 개별적으로 통제 가능
+  border-color: top,right,bottom,left;
+  border-color: top,bottom left,right;
+  border-color: top left,right bottom;
+  border-color: top right bottom left;
