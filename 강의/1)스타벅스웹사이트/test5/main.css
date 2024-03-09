@@ -1,0 +1,35 @@
+html {
+  font-size: 16px;
+}
+span {
+  width: 100px;
+  height: 100px;
+  /* 너무나 당연하게도 인라인 요소인 span에는 가로/세로 너비가 적용되지 않겠죠? */
+  background-color: orange;
+}
+.parent {
+  width: 300px;
+  height: 200px;
+  background-color: blue;
+  font-size: 10px; /* 글자와 관련된 속성은 기본적으로 자식 및 하위 요소들에게 상속이 됨 */
+}
+.child {
+  /* max-width: 300px; */
+  /* min-width: 400px; */
+  width: 50%; /* 화면에 400px이 적용되는 것을 보니 min-width보다 약한 놈인가봄 */
+  /* width: 10em; ->  기본적으로 요소가 가지고 있는 폰트 사이즈인 16px에 10을 곱한 값, 즉 160px*/
+  height: 50%;
+  background-color: aqua;
+}
+
+/* 외부 여백 */
+.container {
+
+}
+.container .item {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 0, 90);
+  margin: 10px;
+  margin-bottom: 50px;
+}
