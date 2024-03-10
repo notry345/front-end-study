@@ -207,7 +207,7 @@ padding-left
 > 테두리선(border)과 색상 표현
 
 border: 선의두께(border-width) 선의종류(border-style) 선의색상(border-color);
-요소의 크기가 커짐
+중요) 요소의 크기가 커짐
 선의 색상은 기본적으로 검정색
 
 각각의 기본값
@@ -250,3 +250,40 @@ border-color : 요소 테두리 선의 색상을 지정하는 단축 속성
   border-color: top,bottom left,right;
   border-color: top left,right bottom;
   border-color: top right bottom left;
+
+<요소의 테두리 선을 지정하는 개별 속성들>
+
+방향을 입력해서 조금 더 세밀한 제어 가능
+border-방향
+border-방향-속성
+
+border-top: 두께 종류 색상;
+border-top-width: 두께;
+border-top-style: 종류;
+border-top-color: 색상;
+
+
+<색상 표현>
+
+색상 이름 : 브라우저에서 제공하는 색상 이름 <- 권장 X
+  red, tomato, royalblue
+Hex 생상코드 : 16진수 색상(hexadecimal colors) <- 실제 제품 제작시 권장
+  #000, #FFFFFF
+RGB : 빛의 삼원색
+  rgb(255, 255, 255)
+RGBA : 빛의 삼원색 + 투명도(0~1 사이의 소수)
+  rgba(0, 0, 0, 0.5)
+HSL : 색상, 채도, 명도
+  hsl(120, 100%, 50%)
+HSLA : 색상, 채도, 명도 + 투명도
+  hsl(120, 100%, 50%, 0.3)
+
+
+> 모서리를 둥글게
+
+border-radius : 요소의 모서리를 둥글게 깎음
+- 0(기본값) : 둥글게 없음
+- 단위 : px, em, vw 등의 단위로 지정
+
+border-radius: 10px;
+요소의 각 모석리에 반지름이 10px인 원의

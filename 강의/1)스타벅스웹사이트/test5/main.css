@@ -34,9 +34,17 @@ span {
 .container2 .item2 {
   width: 100px;
   height: 100px;
-  background-color:yellowgreen;
+  background-color:greenyellow;
   /* border: 4px solid rgb(0, 0, 90); */
 }
 .container2 .item2:first-child {
-  border: 10px dashed rgb(0, 0, 90);
+  border: 5px dashed rgba(0, 0, 90, 0.8);
+  margin: 8px;
+}
+#air {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(74, 255, 255, 0.8);
+  border-radius: 20px;
+  margin: 10px;
 }
