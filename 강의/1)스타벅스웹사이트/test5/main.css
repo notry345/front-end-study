@@ -10,7 +10,8 @@ span {
 .parent {
   width: 300px;
   height: 200px;
-  background-color: blue;
+  background-color: royalblue;
+  margin: 10px;
   font-size: 10px; /* 글자와 관련된 속성은 기본적으로 자식 및 하위 요소들에게 상속이 됨 */
 }
 .child {
@@ -19,7 +20,7 @@ span {
   width: 50%; /* 화면에 400px이 적용되는 것을 보니 min-width보다 약한 놈인가봄 */
   /* width: 10em; ->  기본적으로 요소가 가지고 있는 폰트 사이즈인 16px에 10을 곱한 값, 즉 160px*/
   height: 50%;
-  background-color: aqua;
+  background-color: whitesmoke;
 }
 
 /* 외부 여백 */
@@ -45,6 +46,21 @@ span {
   width: 100px;
   height: 100px;
   background-color: rgba(74, 255, 255, 0.8);
-  border-radius: 20px;
+  border-radius: 0 25px 0 25px;
   margin: 10px;
+}
+.item3 {
+  width: 150px;
+  height: 150px;
+  background-color:rgb(0, 0, 90);
+  color: white;
+}
+.container3 .item3:first-child {
+  /* 요소 사이즈 유지하기 위해 border와 padding 고려하여 직접 계산 */
+  /* width: 94px;
+  height: 94px; */
+  box-sizing: border-box;
+  border: 8px solid rgb(142, 114, 134);
+  border-style: outset;
+  padding: 20px;
 }
