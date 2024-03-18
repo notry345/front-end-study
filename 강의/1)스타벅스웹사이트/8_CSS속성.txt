@@ -593,12 +593,16 @@ rotateY(y) : 회전(y축)
 
 perspective(n) : 원근법(거리) - 단위는 px
 - transform: 띄어쓰기로 구분하는 여러 변환함수들 중 제일 앞에 작성해야 함!
-transform: perspective(600px) 추가적인변환함수;
-- 관찰 대상 자체에 부여
+- ex) transform: perspective(600px) 추가적인변환함수;
+- 변화가 적용되는 관찰 대상에 직접적으로 부여 (자식 요소의 정가운데를 가준으로 원근법 적용)
 
-perspective : 하위 요소를 관찰하는 원근 거리를 지정
+perspective : 하위 요소를 관찰하는 원근 거리를 지정 <- 선호하세요
 - 얘는 변환함수가 아니라 CSS 속성임
 - px 등 단위로 지정
-perspective: 600px;
-- 관찰 대상의 부모에 부여
+- ex) perspective: 600px;
+- 관찰 대상의 부모에 부여 (부모 요소의 정가운데를 기준으로 원근법 적용)
+
+backface-visibility : 3D 변환으로 회전된 요소의 뒷면 숨김 여부
+- visible(기본값) : 뒷면 보임
+- hidden : 뒷면 숨김
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -55,6 +55,7 @@
         width: 100px;
         height: 100px;
         background-color: aqua;
+        perspective: 250px;
       }
       .c .i {
         width: 100px;
@@ -63,9 +64,27 @@
         color: white;
         transform: perspective(150px) rotateX(45deg) translateX(100px);
       }
+      .c .i2 {
+        font-size: 60px;
+        color: white;
+        opacity: 0.7;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(87, 170, 88);
+        /* 글자를 가운데 위치시키기 위한 노력 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotateX(0);
+        backface-visibility: hidden;
+      }
     </style>
   </head>
   <body>
+    <div class="divider"></div>
+    <div class="c">
+      <div class="i2">봙</div>
+    </div>
     <div class="divider"></div>
     <div class="c">
       <div class="i">AB</div>
