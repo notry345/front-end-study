@@ -341,3 +341,85 @@ opacity : 요소의 투명도
 - 1(기본값) : 불투명
 - 0~1 : 0부터 1 사이의 소수점 숫자, 0에 가까울수록 투명해짐
         소수점 단위에서 앞에 0 생략 가능 (0.5 -> .5)
+
+
+> 글꼴
+
+font-style : 글자의 기울기
+- normal : 기울기 없음
+- italic : 이텔릭체
+
+font-weight : 글자의 두께
+- normal, 400 : 기본
+- bold, 700 : 두껍게
+- 100~900 : 100단위 숫자 9개 단계 가능
+- bolder/lighter : 상위(부모) 요소보다 더 두껍게/얇게
+
+font-size : 글자의 크기
+- 16px : 기본 크기
+- 단위 : px, em, rem 등
+
+line-heigth : 한 줄의 높이, 행간
+- 숫자 : 요소의 글꼴 크기의 배수로 지정 <- 권장
+- 단위 : px, em, rem 등
+
+font-family : 글꼴1, "글꼴2", ... 글꼴계열(필수로 작성);
+- 원하는 글꼴 후보 작성
+- 폰트의 이름에 띄어쓰기가 들어가 있으면 따옴푤로 묶어줘야 함
+글꼴계열
+- serif : 바탕체 계열
+- san-serif : 고딕체 계열
+- monospace : 고정너비 글꼴 계열 (가독성 굿)
+- cursive : 필기체 계열
+- fantasy : 장식 글골 계열
+
+
+> 문자
+
+color : 글자의 색상
+- rgb(0,0,0) : 검정색
+- 색상
+
+text-align : 문자의 정렬 방식
+- left/right
+- center
+
+text-decoration : 문자의 장식(선)
+- none : 장식없음
+- underline : 밑줄
+- line-through : 중앙 선
+
+text-indent : 문자 첫 줄의 들여쓰기
+- 0 : 들여쓰기 없음
+- 단위 : px, em, rem 등
+
+
+> 배경
+
+background-color : 요소의 배경 색상
+- transparent(기본값) : 투명함
+- 색상
+
+background-image : 요소의 배경에 이미지 삽입
+- none : 이미지 없음
+- url("경로") : 이미지 경로
+
+background-repeat : 요소의 배경 이미지 반복
+- repeat(기본값) : 수직, 수평 반복
+- repeat-x : 수평으로만 반복
+- repeat-y : 수직으로만 반복
+- no-repeat : 반복 없음
+
+background-position : 요소의 배경 이미지 위치
+- 방향 : top,bottom,left,right,center
+- 단위 : px, em, rem 등
+
+background-size : 요소의 배경 이미지 크기
+- auto : 이미지의 실제 크기
+- 단위로 x축값, y축값 or x축값 하나 주면 자동으로 비율 유지
+- cover : 비율을 유지, 요소의 더 넓은 너비에 맞춤
+- contain : 비율을 유지, 요소의 더 짧은 너비에 맞춤
+
+background-attachmanet : 요소의 배경 이미지 스크롤 특성
+- scroll : 이미지가 요소를 따라서 같이 스크롤
+- fixed : 이미지가 뷰포트에 고정, 스크롤 X
