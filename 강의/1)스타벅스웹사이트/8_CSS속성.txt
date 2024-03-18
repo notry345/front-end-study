@@ -560,7 +560,7 @@ transition-delay : 전환 효과가 몇 초 뒤에 시작할지 대시시간을 
 - 시간(s)
 
 
-> 변환
+> 변환 - 요소를 변화시킴
 
 transform : 변환함수1 변환함수2 변환함수3;
 
@@ -572,19 +572,25 @@ translate(x,y) : 이동(x축,y축) - 단위는 px
 translateX(x) : x축만 이동
 translateY(y) : y축만 이동
 
-scale(x,y) : 크기(x축,y축) - 하나 입력시 x,y 동시 적용
+scale(x,y) : 크기(x축,y축)
+- 하나 입력시 x,y 동시 적용
+- 배수로 적용되니 1보다 작으면 줄어들고, 1보다 크면 늘어나죠
+- scaleX(x), scaleY(y)는 사용 빈도 낮음
 
-rotate(degree) : 회전(각도) - 단위는 deg
+rotate(degree) : 회전(각도) - 각도 단위는 deg
+- 요소의 정가운데를 기준으로 변환이 일어남
+- 기준을 옮길수도 있음
 
 skewX(x) : 기울임(x축)
 skewY(y) : 기울임(y축)
 
 <3D 변환함수>
 
-traslateZ(z) : 이동(z축)
+traslateZ(z) : 이동(z축) - 단위는 px
 
-rotateX(x) : 회전(x축)
+rotateX(x) : 회전(x축) - 단위는 deg
 rotateY(y) : 회전(y축)
 
-perspective(n) : 원근법(거리)
+perspective(n) : 원근법(거리) - 단위는 px
+- transform: 변환함수들 중 제일 앞에 작성해야 함!
 
