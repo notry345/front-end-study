@@ -467,6 +467,9 @@ flex container : display flex가 부여된 요소
 flex item : flex container의 자식 요소
 -> 각각에 부여될 수 있는 속성 다름
 
+
+> flex container에 부여될 수 있는 속성
+
 display : Flex Container의 화면 출력 특성, 컨테이너의 특성!! 아이템이 아니라!!!
 - flex : 컨테이너가 블록 요소와 같이 동작
          (기본적으로 width: auto; -> 가로 너비 최대한 늘어나려함)
@@ -489,3 +492,25 @@ justify-content : 주 축(수평정렬의 경우 수평)의 정렬 방법
 - flex-start : flex items를 시작점으로 정렬
 - flex-end : flex items를 끝점으로 정렬
 - center : flex items를 가운데 정렬
+
+align-content : (주축과 교차하는) 교차 축의 여러 줄에 대한 정렬 방법 (힌 줄 일때에는 동작X)
+                 아이템들이 두 줄 이상이어야 동작 (flex-wrap이 wrap으로 설정되어 있어야 함)
+- stretch(기본값) : flex items를 시작점으로 정렬
+- flex-start : flex items를 시작점으로 정렬
+- flex-end : flex items를 끝점으로 정렬
+- center : flex items를 가운데 정렬
+
+align-items : 교차 축의 한 줄에 대한 정렬 방법 <- 수직정렬시 많이 사용
+- stretch(기본값) : flex items를 교차 축으로 늘림
+- flex-start : flex items를 시작점으로 정렬
+- flex-end : flex items를 끝점으로 정렬
+- center : flex items를 가운데 정렬
+- baseline : flex items를 각 줄의 문자 기준선에 정렬
+
+
+> flex item에 부여될 수 있는 속성
+
+order : flex item의 순서
+- 0(기본값) : 순서 없음
+- 숫자 : 숫자가 작을수록 먼저
+
