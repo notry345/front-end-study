@@ -9,6 +9,9 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
     <style>
+      body {
+        padding: 100px;
+      }
       .container {
         width: 500px;
         height: 300px;
@@ -32,9 +35,44 @@
       .container .item:nth-child(3) {
         flex-grow: 2;
       }
+      .divider {
+        height: 50px;
+      }
+      .ex2 {
+        width: 100px;
+        height: 100px;
+        background-color: palevioletred;
+        /* transition: width 0.6s, background-color 2s; */
+        transition: 1s .5s;
+        /* 시간 2개 명시시 첫번째는 지속시간, 두번째는 대기시간 */
+      }
+      /* 가상클래스 */
+      .ex2:hover {
+        width: 300px;
+        background-color: royalblue;
+      }
+      .c {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+      }
+      .c .i {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(15, 47, 117);
+        color: white;
+        transform: rotate(45deg) scale(1.2);
+      }
     </style>
   </head>
   <body>
+    <div class="divider"></div>
+    <div class="c">
+      <div class="i">AB</div>
+    </div>
+    <div class="divider"></div>
+    <div class="ex2"></div>
+    <div class="divider"></div>
     <div class="container">
       <div class="item">1</div>
       <div class="item">2</div>
