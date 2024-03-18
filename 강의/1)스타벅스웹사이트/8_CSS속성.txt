@@ -423,3 +423,24 @@ background-size : 요소의 배경 이미지 크기
 background-attachmanet : 요소의 배경 이미지 스크롤 특성
 - scroll : 이미지가 요소를 따라서 같이 스크롤
 - fixed : 이미지가 뷰포트에 고정, 스크롤 X
+
+
+> 배치
+
+기준을 만들어준 후 위치를 지정해야 함!
+위치 상의 부모 요소를 찾을 때까지 상위 요소로 올라감
+position: static; 인 요소는 건너뛰고
+position: relative; 인 요소 있으면 위치 상 부모로 인식
+body까지 올라가도 기준이 되는 부모를 찾지 못하면 걍 viewport 기준으로 배치됨!
+
+position : 요소의 위치 지정 기준
+- static(기본) : 기준 없음
+- relative : 요소 자신(이 있던 자리)을 기준, 재배치 전 자리는 시각적으로만 비어있음 <- 거의 사용 X
+- absolute : 위치 상 부모 요소를 기준
+- fixed : 뷰포트(브라우저)를 기준
+
+top,bottom,left,right : 요소의 각 방향별 거리 지정
+- position과 함께 사용
+- 음수 사용 가능
+- auto : 브라우저가 계산
+- 단위
