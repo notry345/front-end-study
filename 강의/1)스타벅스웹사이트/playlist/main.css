@@ -1,39 +1,88 @@
 body {
   height: 700px;
   background-color: black;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 #header {
   margin: 50px auto 40px;
   text-align: center;
   font-size: 40px;
   font-style: italic;
-  color: #ffffff;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: under;
 }
 .container {
-  padding: 20px 40px;
-  height: 300px;
+  /* padding: 20px 40px; */
+  /* height: 300px; */
   display: flex;
   justify-content: center;
+}
+#infos {
+  height: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.info {
+  width: 500px;
+  min-width: 250px;
+  max-width: 4500px;
+  height: 50px;
+  margin: 0 20px;
+  padding: 0 20px;
+  border-bottom: 2px solid #fff;
+  /* for text */
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+  opacity: 0.7;
+}
+/* couldn't think the way to bind .info and info2 together... */
+.info2 {
+  width: 500px;
+  min-width: 250px;
+  max-width: 4500px;
+  height: 50px;
+  font-size: 20px;
+  margin: 0 20px;
+  padding: 0 20px;
+  text-align: center;
+}
+.linkto {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  color: #fff;
+  opacity: 0.7;
 }
 .container .songs {
   width: 500px;
   min-width: 250px;
   max-width: 4500px;
-  height: 480px;
+  min-height: 304px;
   background-color: #000000;
-  margin: 0 20px;
+  margin: 20px;
+  padding: 20px;
   border-radius: 10px;
-  transition: transform 0.9s, background-color 1s;
+  /* .songs 컨테이너의 높이를 유동적으로 조정하여 내부의 div 요소들에 따라 크기가 변하도록 하고 싶다면,
+   height 속성을 고정값에서 유동적인 값으로 변경해야 합니다. 
+   현재 height: 480px;로 설정되어 있어서 컨테이너의 높이가 항상 480픽셀로 고정되어 있습니다. 
+   이를 유동적으로 만들기 위해 height 속성을 삭제하거나 min-height 속성을 사용하는 것이 좋습니다. 
+   min-height 속성을 사용하면 최소 높이를 지정할 수 있으며, 내용이 이보다 많아지면 컨테이너의 높이가 자동으로 늘어나게 됩니다. */
+  transition: 0.15s;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
-  overflow: hidden;
+  align-content: flex-start;
+  /* align-content: center; */
+  
+  /* 넘쳤을 때 브라우저가 자동으로 스크롤 바 추가, 스크롤 바는 시각적으로 숨기기 */
+  overflow: auto;
+  scrollbar-width: none;
   background-size: cover;
   text-align: center;
 }
-
+/* .container .songs::-webkit-scrollbar {
+  display: none;
+} */
 .container .songs .song {
   width: 130px;
   height: 130px;
@@ -49,18 +98,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-.linkto {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-}
-.linkto
+
 .container .songs:hover {
   border: 2px solid #c3c3c3;
 }
 .container .songs .song:hover {
   transform: scale(1.27);
   backface-visibility: hidden;
+  border: 1px solid white;
 }
 .container .songs:nth-child(1) {
   background-image: url("./images/bg1.jpg");
@@ -87,6 +132,9 @@ body {
 #table1 .song:nth-child(5) {
   background-image: url("./images/5.jpg");
 }
+#table1 .song:nth-child(6) {
+  background-image: url("./images/annex1.jpg");
+}
 
 #table2 .song:nth-child(1) {
   background-image: url("./images/6.jpg");
@@ -103,6 +151,10 @@ body {
 #table2 .song:nth-child(5) {
   background-image: url("./images/10.jpg");
 }
+#table2 .song:nth-child(6) {
+  background-image: url("./images/annex2.jpg");
+}
+
 
 #table3 .song:nth-child(1) {
   background-image: url("./images/11.jpg");
@@ -119,3 +171,7 @@ body {
 #table3 .song:nth-child(5) {
   background-image: url("./images/15.jpg");
 }
+#table3 .song:nth-child(6) {
+  background-image: url("./images/annex3.jpg");
+}
+
