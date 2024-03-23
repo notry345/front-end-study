@@ -31,7 +31,7 @@ Zero-based Numbering
 
 > 데이터 종류 (자료형)
  
-./JS개념/datatype.js 참고
+./JS맛보기/datatype.js 참고
 
 
 > 변수
@@ -58,4 +58,32 @@ SyntaxError(문법에러) 발생
 
 특정 동작(기능)을 수행하는 일부 코드의 집합
 
-./JS개념/function.js 참고
+./JS맛보기/function.js 참고
+
+
+> 조건문
+
+조건의 결과(truthy, falsy)에 따라 다른 코드를 실행하는 구문
+
+./JS맛보기/conditional.js 참고
+
+
+> DOM API
+JS에서 HTML을 제어하기 위한 여러가지 명령들
+
+Document Object Model
+HTML 문서 안의 요소(div 등)들
+
+Application Programming Interface
+웹사이트가 동작하기 위해서 입력하는 프로그래밍 명령들
+
+script 태그의 위치
+- body 영역 맨 끝에 위치시키거나
+- head 영역에 defer라는 키워드를 포함시켜 위치시키거나
+
+./JS맛보기/domAPI.js 참고
+
+
+> 메소드 체이닝 (Method Chaining)
+
+method들을 chain처럼 연결하여 사용
