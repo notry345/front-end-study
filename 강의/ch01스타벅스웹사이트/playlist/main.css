@@ -57,7 +57,10 @@ body {
   width: 500px;
   min-width: 250px;
   max-width: 4500px;
-  min-height: 304px;
+  /* min-height: 304px; */
+  /* height: 480px; */
+  min-height: 480;
+  max-height: 600px;
   background-color: #000000;
   margin: 20px;
   padding: 20px;
@@ -71,10 +74,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: flex-start;
   /* align-content: center; */
+  align-content: flex-start;
   
   /* 넘쳤을 때 브라우저가 자동으로 스크롤 바 추가, 스크롤 바는 시각적으로 숨기기 */
+  /* 일단 지금 상태로는 스크롤 뭐 필요없는 듯 */
   overflow: auto;
   scrollbar-width: none;
   background-size: cover;
@@ -101,6 +105,7 @@ body {
 
 .container .songs:hover {
   border: 2px solid #c3c3c3;
+  transform: scale(1.02);
 }
 .container .songs .song:hover {
   transform: scale(1.27);
