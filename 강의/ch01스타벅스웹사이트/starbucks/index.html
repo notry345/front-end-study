@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks Coffee Korea</title>
-
+    <!-- 오픈 그래프 -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Starbucks" />
     <meta property="og:title" content="Starbucks Coffee Korea" />
@@ -16,6 +16,7 @@
     <meta property="og:image" content="./images/starbucks_seo.jpg" />
     <meta property="og:url" content="https://starbucks.co.kr" />
 
+    <!-- 트위터 카드 -->
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:site" content="Starbucks" />
     <meta property="twitter:title" content="Starbucks Coffee Korea" />
@@ -32,6 +33,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
     />
+    <!-- 사용할 폰트 (google font의 nanum) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -43,18 +45,40 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <!-- 사이트의 헤더 영역이라는 기본적인 의미만 갖음, 기능 X -->
     <header>
       <div class="inner">
-
         <!-- (생략된 도메인)/(생략된 index.html) -->
         <a href="/ch01스타벅스웹사이트/starbucks" class="logo">
+          <!-- 이미지 요소는 인라인 요소 중 하나 -> baseline 존재 -->
           <img src="./images/starbucks_logo.png" alt="STARBUCKS" />
         </a>
-
+        <!-- SUB MENU -->
+        <div class="sub-menu">
+          <ul class="menu">
+            <li>
+              <a href="/signin">Sign In</a>
+            </li>
+            <li>
+              <!-- 자바스크립트를 통해서 어떤 기능을 동작시킬건데 아직 임시적으로 명시 -->
+              <a href="javascript.void(0)">My Starbucks</a>
+            </li>
+            <li>
+              <a href="javascript.void(0)">Customer Service & Ideas</a>
+            </li>
+            <li>
+              <a href="javascript.void(0)">Find a Store</a>
+            </li>
+            <div class="search">
+              <input type="text" />
+              <div class="material-icons">search</div>
+            </div>
+          </ul>
+        </div>
       </div>
     </header>
   </body>
