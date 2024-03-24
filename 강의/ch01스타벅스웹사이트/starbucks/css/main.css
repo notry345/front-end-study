@@ -1,5 +1,120 @@
+/* COMMON */
 body {
   color: #333;
   font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+}
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+/* HEADER */
+header {
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+}
+header .inner {
+  width: 1100px;
+  height: 120px;
+  /* 헤더 중앙 정렬 */
+  margin: 0 auto;
+  position: relative;
+}
+header .logo {
+  /* 요소의 높이를 정확하게 명시해야 브라우저가 계산해줌 */
+  height: 75px;
+  /* 위치 상의 부모 요소(container)를 기준으로 하여
+  inner 영역 내부에 수직 가운데에 배치 */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+/* SUB MENU */
+header .sub-menu {
+  display: flex;
+}
+/* 상위 선택자들을 후손선택자(띄어쓰기)를 사용하여 자세히 명시
+-> 나중에 스타일이 중복되는 것 최대한 방지하기 위함 */
+header .sub-menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+header .sub-menu ul.menu {
+  font-family: Arial, sans-serif;
+  display: flex;
+}
+header .sub-menu ul.menu li {
+  position: relative;
+}
+/* 내부의 앞쪽에 가상 인라인 요소(구분선) 추가 */
+header .sub-menu ul.menu li::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* 가장 왼쪽 구분선 안보이게 */
+header .sub-menu ul.menu li:first-child:before {
+  display: none;
+}
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  /* 사용자가 클릭할 수 있는 영역 늘리기 위함 */
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+/* 검색 부분 */
+header .sub-menu .search {
+  height: 34px;
+  /* 서치 아이콘의 위치 상의 부모 요소가 될 수 있게... */
+  position: relative;
+}
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+  font-size: 12px;
+  transition: width 0.4s;
+}
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #669900;
+}
+/* 돋보기 아이콘 */
+header .sub-menu .search .material-icons {
+  height: 24px;
+  position: absolute;
+  /* 수직 가운데 배치 */
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: 0.4s;
+}
+/* JS에서 추가해준 클래스 .search에 일치 선택자로 추가 */
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
 }
